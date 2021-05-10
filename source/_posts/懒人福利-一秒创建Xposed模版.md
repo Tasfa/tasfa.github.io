@@ -2,7 +2,10 @@
 title: 懒人福利-一秒创建Xposed模版
 date: 2018-10-01 09:49:25
 tags: Xposed
-categories: Hook&代码注入
+categories: 
+	- 代码干预
+	- Hook
+	- Xposed
 ---
 
 

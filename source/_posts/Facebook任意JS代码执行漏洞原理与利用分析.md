@@ -2,7 +2,9 @@
 title: Facebook任意JS代码执行漏洞原理与利用分析
 date: 2018-10-06 09:49:25
 tags: Android漏洞
-categories: 漏洞分析
+categories: 
+	- Android安全
+	- 漏洞分析
 ---
 
 

@@ -2,7 +2,10 @@
 title: Pwn2Own华为HiApp漏洞原理与利用分析(上)
 date: 2018-10-03 09:49:25
 tags: Android漏洞
-categories: 漏洞分析
+top: true
+categories: 
+	- Android安全
+	- 漏洞分析
 ---
 
 ### 0x01 简介

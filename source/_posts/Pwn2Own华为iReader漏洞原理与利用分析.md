@@ -2,7 +2,9 @@
 title: Pwn2Own华为iReader漏洞原理与利用分析
 date: 2018-10-02 09:49:25
 tags: Android漏洞
-categories: 漏洞分析
+categories: 
+	- Android安全
+	- 漏洞分析
 ---
 
 ### 0x01 前言

@@ -2,7 +2,9 @@
 title: 蓝牙App系列漏洞原理分析与漏洞利用
 date: 2018-10-01 09:49:25
 tags: Android漏洞
-categories: 漏洞分析
+categories: 
+	- Android安全
+	- 漏洞分析
 ---
 
 > 作者: heeeeen
