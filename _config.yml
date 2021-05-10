@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: Tasfa's World! 
+subtitle: 'Try to Debug your heart!'
+description: 'AndroidSecurity'
+keywords: 'AndroidSecurity,AndroidReverseEngineering'
+author: Tasfa
+language: zh
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next 
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -105,4 +105,5 @@ deploy:
   type: git
   repo:
     github: https://github.com/Tasfa/tasfa.github.io.git
-  branch: main
+  branch: master
+
