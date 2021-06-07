@@ -145,6 +145,181 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/10/04/Pwn2Own%E5%8D%8E%E4%B8%BAHiApp%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90-%E4%B8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/atv.jpg">
+      <meta itemprop="name" content="Tasfa">
+      <meta itemprop="description" content="AndroidSecurity">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tasfa's World!">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/10/04/Pwn2Own%E5%8D%8E%E4%B8%BAHiApp%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90-%E4%B8%8B/" class="post-title-link" itemprop="url">Pwn2Own华为HiApp漏洞原理与利用分析(下)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-10-04 09:49:25" itemprop="dateCreated datePublished" datetime="2018-10-04T09:49:25+08:00">2018-10-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-22 21:10:54" itemprop="dateModified" datetime="2021-05-22T21:10:54+08:00">2021-05-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">Android安全</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android%E5%AE%89%E5%85%A8/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">漏洞分析</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="0x01-前言"><a href="#0x01-前言" class="headerlink" title="0x01 前言"></a>0x01 前言</h3><p><a target="_blank" rel="noopener" href="http://www.freebuf.com/articles/terminal/172780.html">Pwn2Own华为HiApp漏洞原理与利用分析(上)</a></p>
+<p>阅读本篇的基础是先理解上篇的攻击构造链路。</p>
+<h3 id="0x02-漏洞分析"><a href="#0x02-漏洞分析" class="headerlink" title="0x02 漏洞分析"></a>0x02 漏洞分析</h3><p>不知道有没有细心的同学发现我在上篇分析文章中留下的<strong>彩蛋</strong>。<br>本篇自然是从这个彩蛋切入.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/10/04/Pwn2Own%E5%8D%8E%E4%B8%BAHiApp%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90-%E4%B8%8B/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/10/03/Pwn2Own%E5%8D%8E%E4%B8%BAHiApp%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90-%E4%B8%8A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/atv.jpg">
+      <meta itemprop="name" content="Tasfa">
+      <meta itemprop="description" content="AndroidSecurity">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tasfa's World!">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/10/03/Pwn2Own%E5%8D%8E%E4%B8%BAHiApp%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90-%E4%B8%8A/" class="post-title-link" itemprop="url">Pwn2Own华为HiApp漏洞原理与利用分析(上)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-10-03 09:49:25" itemprop="dateCreated datePublished" datetime="2018-10-03T09:49:25+08:00">2018-10-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-22 21:10:54" itemprop="dateModified" datetime="2021-05-22T21:10:54+08:00">2021-05-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">Android安全</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android%E5%AE%89%E5%85%A8/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">漏洞分析</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="0x01-简介"><a href="#0x01-简介" class="headerlink" title="0x01 简介"></a>0x01 简介</h3><p>ps:本文从攻击者的角度来分析如何发现Pwn2Own华为手机漏洞，但不代表与漏洞发现者的思路相同，仅供参考。本系列漏洞分析由于涉及大量代码分析，所以拆分为四部分，也比较容易阅读和理解消化。</p>
+<p>攻击视频详细可参见<a target="_blank" rel="noopener" href="https://www.thezdi.com/blog/2017/11/2/the-results-mobile-pwn2own-2017-day-two">Pwn2own Blog</a></p>
+<p>官方公告: <a target="_blank" rel="noopener" href="http://www.huawei.com/en/psirt/security-advisories/huawei-sa-20171120-01-hwreader-en">http://www.huawei.com/en/psirt/security-advisories/huawei-sa-20171120-01-hwreader-en</a></p>
+<p>漏洞可直接造成任意目录遍历、删除、任意代码执行等高危操作</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/10/03/Pwn2Own%E5%8D%8E%E4%B8%BAHiApp%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90-%E4%B8%8A/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/10/IDA%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -176,7 +351,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-05-22 21:10:54" itemprop="dateModified" datetime="2021-05-22T21:10:54+08:00">2021-05-22</time>
+                <time title="Modified: 2021-06-07 16:13:25" itemprop="dateModified" datetime="2021-06-07T16:13:25+08:00">2021-06-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -203,7 +378,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h3 id="整体界面"><a href="#整体界面" class="headerlink" title="整体界面"></a>整体界面</h3><p><img src="/Users/tasfa/Desktop/%E6%A1%8C%E9%9D%A2/android%E5%9F%B9%E8%AE%AD&%E5%88%86%E4%BA%AB/%E9%83%A8%E9%97%A8%E5%9F%B9%E8%AE%AD/class3/ida_main.png"></p>
+<p><strong>File , Edit , Jump , Search , View , Debugger , Options , Windows , Help</strong> 9个Tab菜单</p>
+<ul>
+<li>1.File 文件操作相关、脚本操作相关、snapshot相关操作</li>
+<li>2.Edit 功能比较多，主要涉及修改查询注释等</li>
+<li>3.Jump 是用来跳转的，可以有很多种类型的跳转，比如跳转到上一个位置或者下一个位置，跳转到某个指定的地址。还可以根据名字，函数来进行跳转，跳转到一个新的窗口，跳转某一个偏移量等等</li>
+<li>4.Serach 搜索相关操作</li>
+<li>5.View 是用来选择显示方式的，或者显示某一特定模块信息的。比如以树形逻辑图显示，或者16进制形式显示。还可以单独显示某一特定信息，比如输入或者输出表等。</li>
+<li>6.Debugger 动态调试</li>
+<li>7.Options 在这里可以进行一下常规性的设置</li>
+<li>8.Windows 窗口相关的一些操作</li>
+<li>9.Help 使用IDA的一些帮助文档，检查更新等等。</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/10/IDA%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -253,7 +448,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-05-22 21:10:54" itemprop="dateModified" datetime="2021-05-22T21:10:54+08:00">2021-05-22</time>
+                <time title="Modified: 2021-06-07 16:09:59" itemprop="dateModified" datetime="2021-06-07T16:09:59+08:00">2021-06-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -280,162 +475,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/10/So%E6%B3%A8%E5%85%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/atv.jpg">
-      <meta itemprop="name" content="Tasfa">
-      <meta itemprop="description" content="AndroidSecurity">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tasfa's World!">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/10/So%E6%B3%A8%E5%85%A5/" class="post-title-link" itemprop="url">So注入</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-05-10 14:34:43" itemprop="dateCreated datePublished" datetime="2021-05-10T14:34:43+08:00">2021-05-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-05-22 21:10:54" itemprop="dateModified" datetime="2021-05-22T21:10:54+08:00">2021-05-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BB%A3%E7%A0%81%E5%B9%B2%E9%A2%84/" itemprop="url" rel="index"><span itemprop="name">代码干预</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BB%A3%E7%A0%81%E5%B9%B2%E9%A2%84/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/" itemprop="url" rel="index"><span itemprop="name">代码注入</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/10/Smali%E6%B3%A8%E5%85%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/atv.jpg">
-      <meta itemprop="name" content="Tasfa">
-      <meta itemprop="description" content="AndroidSecurity">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tasfa's World!">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/10/Smali%E6%B3%A8%E5%85%A5/" class="post-title-link" itemprop="url">Smali注入</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-05-10 14:34:22" itemprop="dateCreated datePublished" datetime="2021-05-10T14:34:22+08:00">2021-05-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-05-22 21:10:54" itemprop="dateModified" datetime="2021-05-22T21:10:54+08:00">2021-05-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BB%A3%E7%A0%81%E5%B9%B2%E9%A2%84/" itemprop="url" rel="index"><span itemprop="name">代码干预</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BB%A3%E7%A0%81%E5%B9%B2%E9%A2%84/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/" itemprop="url" rel="index"><span itemprop="name">代码注入</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>smali 注入</p>
-
+          <h3 id="JEB使用"><a href="#JEB使用" class="headerlink" title="JEB使用"></a>JEB使用</h3><h4 id="整体界面"><a href="#整体界面" class="headerlink" title="整体界面:"></a>整体界面:</h4><p><img src="https://www.pnfsoftware.com/jeb/manual/img/jeb-raasta-apk.png"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/10/Jeb%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -818,7 +866,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2018/10/04/Pwn2Own%E5%8D%8E%E4%B8%BAHiApp%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90-%E4%B8%8B/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/10/02/Pwn2Own%E5%8D%8E%E4%B8%BAiReader%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/atv.jpg">
@@ -832,7 +880,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2018/10/04/Pwn2Own%E5%8D%8E%E4%B8%BAHiApp%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90-%E4%B8%8B/" class="post-title-link" itemprop="url">Pwn2Own华为HiApp漏洞原理与利用分析(下)</a>
+            <a href="/2018/10/02/Pwn2Own%E5%8D%8E%E4%B8%BAiReader%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90/" class="post-title-link" itemprop="url">Pwn2Own华为iReader漏洞原理与利用分析</a>
         </h2>
 
         <div class="post-meta">
@@ -842,7 +890,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2018-10-04 09:49:25" itemprop="dateCreated datePublished" datetime="2018-10-04T09:49:25+08:00">2018-10-04</time>
+              <time title="Created: 2018-10-02 09:49:25" itemprop="dateCreated datePublished" datetime="2018-10-02T09:49:25+08:00">2018-10-02</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -876,12 +924,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="0x01-前言"><a href="#0x01-前言" class="headerlink" title="0x01 前言"></a>0x01 前言</h3><p><a target="_blank" rel="noopener" href="http://www.freebuf.com/articles/terminal/172780.html">Pwn2Own华为HiApp漏洞原理与利用分析(上)</a></p>
-<p>阅读本篇的基础是先理解上篇的攻击构造链路。</p>
-<h3 id="0x02-漏洞分析"><a href="#0x02-漏洞分析" class="headerlink" title="0x02 漏洞分析"></a>0x02 漏洞分析</h3><p>不知道有没有细心的同学发现我在上篇分析文章中留下的<strong>彩蛋</strong>。<br>本篇自然是从这个彩蛋切入.</p>
+          <h3 id="0x01-前言"><a href="#0x01-前言" class="headerlink" title="0x01 前言"></a>0x01 前言</h3><p>这部分漏洞分析属于之前MWR InfoSecurity的研究员报告中的第三部分,同样该报告仅有漏洞的简单描述，具体的PoC也未详细给出.</p>
+<p>因此本文的目的依旧是去探索漏洞挖掘的思路,以下不代表漏洞作者思路,欢迎更好的想法,欢迎讨论。</p>
+<p>ps: 附上2017 pwn2own mobile视频</p>
+<p><a target="_blank" rel="noopener" href="https://youtu.be/4Oy7mBeOmDg">视频需梯子</a></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/10/04/Pwn2Own%E5%8D%8E%E4%B8%BAHiApp%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90-%E4%B8%8B/#more" rel="contents">
+              <a class="btn" href="/2018/10/02/Pwn2Own%E5%8D%8E%E4%B8%BAiReader%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -905,7 +954,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2018/10/03/Pwn2Own%E5%8D%8E%E4%B8%BAHiApp%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90-%E4%B8%8A/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/10/01/%E8%93%9D%E7%89%99App%E7%B3%BB%E5%88%97%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%B8%8E%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/atv.jpg">
@@ -919,7 +968,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2018/10/03/Pwn2Own%E5%8D%8E%E4%B8%BAHiApp%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90-%E4%B8%8A/" class="post-title-link" itemprop="url">Pwn2Own华为HiApp漏洞原理与利用分析(上)</a>
+            <a href="/2018/10/01/%E8%93%9D%E7%89%99App%E7%B3%BB%E5%88%97%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%B8%8E%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8/" class="post-title-link" itemprop="url">蓝牙App系列漏洞原理分析与漏洞利用</a>
         </h2>
 
         <div class="post-meta">
@@ -929,7 +978,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2018-10-03 09:49:25" itemprop="dateCreated datePublished" datetime="2018-10-03T09:49:25+08:00">2018-10-03</time>
+              <time title="Created: 2018-10-01 09:49:25" itemprop="dateCreated datePublished" datetime="2018-10-01T09:49:25+08:00">2018-10-01</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -963,13 +1012,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="0x01-简介"><a href="#0x01-简介" class="headerlink" title="0x01 简介"></a>0x01 简介</h3><p>ps:本文从攻击者的角度来分析如何发现Pwn2Own华为手机漏洞，但不代表与漏洞发现者的思路相同，仅供参考。本系列漏洞分析由于涉及大量代码分析，所以拆分为四部分，也比较容易阅读和理解消化。</p>
-<p>攻击视频详细可参见<a target="_blank" rel="noopener" href="https://www.thezdi.com/blog/2017/11/2/the-results-mobile-pwn2own-2017-day-two">Pwn2own Blog</a></p>
-<p>官方公告: <a target="_blank" rel="noopener" href="http://www.huawei.com/en/psirt/security-advisories/huawei-sa-20171120-01-hwreader-en">http://www.huawei.com/en/psirt/security-advisories/huawei-sa-20171120-01-hwreader-en</a></p>
-<p>漏洞可直接造成任意目录遍历、删除、任意代码执行等高危操作</p>
+          <blockquote>
+<p>作者: heeeeen</p>
+<p>本文系转载，目的是学习，如有侵权，请联系删除</p>
+<p>转载出处:<a target="_blank" rel="noopener" href="http://www.ms509.com/">http://www.ms509.com/</a></p>
+</blockquote>
+<h2 id="蓝牙App漏洞系列分析之一CVE-2017-0601"><a href="#蓝牙App漏洞系列分析之一CVE-2017-0601" class="headerlink" title="蓝牙App漏洞系列分析之一CVE-2017-0601"></a>蓝牙App漏洞系列分析之一CVE-2017-0601</h2><h3 id="0x01-概要"><a href="#0x01-概要" class="headerlink" title="0x01 概要"></a>0x01 概要</h3><p>2017年5月的Android安全公告修复了我们提交的一个蓝牙提权中危漏洞，这个漏洞尽管简单，但比较有意思，能够使本地恶意App绕过用户交互，使用户强制接收外部传入的蓝牙文件。漏洞概要如下：</p>
+<pre><code>CVE: CVE-2017-0601
+BugID: A-35258579
+严重性: 中
+影响的Google设备: All
+Updated AOSP versions: 7.0, 7.1.1, 7.1.2
+</code></pre>
+<h3 id="0x02-漏洞分析"><a href="#0x02-漏洞分析" class="headerlink" title="0x02 漏洞分析"></a>0x02 漏洞分析</h3><p>蓝牙App暴露了一个广播接收器com.android.bluetooth.opp.BluetoothOppReceiver，本地普通App可以向这个Receiver发送广播，查看其OnReceive方法，包含了对多种传入广播Intent Action的处理，但是大多数Intent Action处于保护状态，简单用adb shell可以一一对其测试，比如</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/10/03/Pwn2Own%E5%8D%8E%E4%B8%BAHiApp%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%A9%E7%94%A8%E5%88%86%E6%9E%90-%E4%B8%8A/#more" rel="contents">
+              <a class="btn" href="/2018/10/01/%E8%93%9D%E7%89%99App%E7%B3%BB%E5%88%97%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%B8%8E%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -992,7 +1050,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1059,17 +1117,17 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
